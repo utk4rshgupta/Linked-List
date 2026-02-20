@@ -49,7 +49,7 @@ public class LL {
         Node node = new Node(val);
         tail.next=node;
         tail=node;
-    size++;
+        size++;
     }
 
     //Insert at a particular position
