@@ -20,6 +20,19 @@ public class DLL {
         }
         System.out.println("END");
     }
+    public void displayRev(){
+        Node node = head;
+        Node last = null;
+        while(node!=null){
+            last = node;
+            node = node.next;
+        }
+        while(last!=null){
+            System.out.print(last.val + "->");
+            last=last.prev;
+        }
+        System.out.println("END");
+    }
     private class Node{
         int val;
         Node next;

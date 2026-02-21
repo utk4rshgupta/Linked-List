@@ -5,6 +5,12 @@ public class main{
         DLL list = new DLL();
         list.insertFirst(10);
         list.insertFirst(20);
-        list.display();
+        list.insertFirst(10);
+        list.insertFirst(20);
+        list.insertFirst(10);
+        list.insertFirst(20);
+        list.insertFirst(10);
+        list.insertFirst(20);
+        list.displayRev();
     }
 }
