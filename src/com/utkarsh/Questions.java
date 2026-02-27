@@ -1,6 +1,15 @@
 package com.utkarsh;
 
 public class Questions {
+    class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
+
     // https://leetcode.com/problems/linked-list-cycle-ii/
     public ListNode detectCycle(ListNode head) {
         LL ListNode = new LL();

@@ -1,6 +1,16 @@
 package com.utkarsh;
 
 public class MergeSort {
+    class ListNode {
+     int val;
+     ListNode next;
+     ListNode(int x) {
+         val = x;
+         next = null;
+     }
+ }
+
+    // Merge Sort in Linked list
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -12,7 +22,6 @@ public class MergeSort {
 
         return merge(left, right);
     }
-
     ListNode merge(ListNode list1, ListNode list2) {
         ListNode dummyHead = new ListNode();
         ListNode tail = dummyHead;
@@ -30,7 +39,7 @@ public class MergeSort {
         tail.next = (list1 != null) ? list1 : list2;
         return dummyHead.next;
     }
-
+    // get Middle element in LL
     ListNode getMid(ListNode head) {
         ListNode midPrev = null;
         while (head != null && head.next != null) {
@@ -41,5 +50,5 @@ public class MergeSort {
         midPrev.next = null;
         return mid;
     }
-}
+
 }
