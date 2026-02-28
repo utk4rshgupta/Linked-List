@@ -102,6 +102,8 @@ public class Questions {
         return false;
     }
     private int findSquare(int number) {
+
+
         int ans = 0;
         while (number > 0) {
             int rem = number % 10 ;
