@@ -252,4 +252,41 @@ public class Questions {
         return length;
     }
 
+    public ListNode reverseAltKGroup(ListNode head,int k){
+        if(k<=1 || head == null){
+            return head;
+        }
+        ListNode curr = head;
+        ListNode prev = null;
+
+        while(curr!=null){
+            ListNode last = prev;
+            ListNode newEnd = curr;
+
+            ListNode next = curr.next;
+            for (int i = 0; curr != null && i < k; i++) {
+                curr.next = prev;
+                prev = curr;
+                curr=next;
+                if(next!=null){
+                    next=next.next;
+                }
+            }
+            if(last!=null){
+                last.next = prev;
+            }else{
+                head = prev;
+            }
+            newEnd.next = curr;
+
+            // skip the k nodes
+            for (int i = 0; curr != null && i < k; i++) {
+                prev = curr;
+                curr = curr.next;
+            }
+        }
+        return head;
+    }
+
+
 }
